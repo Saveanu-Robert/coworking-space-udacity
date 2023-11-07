@@ -23,11 +23,11 @@ spec:
                 name: app-config
             - secretRef:
                 name: app-secret
-          # env:
-          #   - name: DB_PASSWORD
-          #     valueFrom:
-          #       secretKeyRef:
-          #         name: postgresql
-          #         key: postgres-password
+          env:
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgresql
+                  key: postgres-password
           ports:
             - containerPort: 5000

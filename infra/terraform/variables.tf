@@ -3,7 +3,7 @@ variable "region" {
   default = "us-east-1"
 }
 variable "k8s_version" {
-  default = "1.25"
+  default = "1.28"
 }
 
 variable "enable_private" {
