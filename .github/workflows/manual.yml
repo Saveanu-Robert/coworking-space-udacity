@@ -30,7 +30,6 @@ jobs:
       id: create
       uses: atlassian/gajira-create@v3
       with:
-        project: CONUPDATE
         issuetype: Task
         summary: |
           Github PR [Assign the ND component]  | Repo: ${{ github.repository }}  | PR# ${{github.event.number}}
