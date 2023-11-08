@@ -16,18 +16,12 @@ spec:
     spec:
       containers:
         - name: analytics
-          image: 757002793316.dkr.ecr.us-east-1.amazonaws.com/analytics:latest
+          image: 157952113547.dkr.ecr.us-east-1.amazonaws.com/analytics:latest
           imagePullPolicy: Always
           envFrom:
             - configMapRef:
                 name: app-config
             - secretRef:
                 name: app-secret
-          env:
-            - name: DB_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: postgresql
-                  key: postgres-password
           ports:
             - containerPort: 5000
