@@ -28,7 +28,7 @@ jobs:
         
     - name: Create NEW JIRA ticket
       id: create
-      uses: atlassian/gajira-create@v2.0.1
+      uses: atlassian/gajira-create@v3
       with:
         project: CONUPDATE
         issuetype: Task
@@ -44,3 +44,4 @@ jobs:
 
     - name: Log created issue
       run: echo "Issue ${{ steps.create.outputs.issue }} was created"
+
